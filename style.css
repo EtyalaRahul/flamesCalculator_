@@ -1,0 +1,160 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Background */
+.bg {
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://wallpapercave.com/wp/wp3205539.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+/* Container */
+.container {
+    width: 38vw;
+    min-height: 70vh;
+    background-image: linear-gradient(123deg, #AA6969, #EF546D, #B6D3D4);
+    border-radius: 53px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    animation: fadeIn 1s ease-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container:hover {
+    border: 6px solid pink;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* Heading */
+#fc {
+    font-size: 2rem;
+    color: papayawhip;
+    animation: slideDown 1s ease-out;
+}
+
+/* Inputs */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+input[type="text"] {
+    height: 45px;
+    padding: 0 1rem;
+    border-radius: 23px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Buttons */
+.btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 23px;
+    background-color: #d1001f;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #a00018;
+    transform: translateY(-2px);
+}
+
+/* Result Text */
+#changename {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    display: none;
+    animation: popIn 0.5s ease-out;
+}
+
+/* GIF */
+#exictedgif {
+    width: 140px;
+    height: 144px;
+    margin-top: 20px;
+    animation: pulse 2s infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90vw;
+        padding: 1.5rem;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+        height: 40px;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    #fc {
+        font-size: 1.6rem;
+    }
+
+    #changename {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
